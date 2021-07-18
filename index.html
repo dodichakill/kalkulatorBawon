@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>kalkulator</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="CSS/index.css" />
+</head>
+
+<body>
+  <div class="jdl">{#} Kalkulator bawon</div>
+  <div class="bg"></div>
+  <div class="main">
+    <form name="form">
+      <input class="textview" name="textview" id="xtc" readonly />
+    </form>
+    <table class="table">
+      <tr>
+        <td>
+          <input class="button" type="button" value="C" onclick="c()" style="background-color: #ff0707" />
+        </td>
+        <td>
+          <input class="button operator" type="button" value="<" onclick="back() " />
+        </td>
+        <td>
+          <input class="button operator" type="button" value="/" onclick="insert('/')" />
+        </td>
+        <td>
+          <input class="button operator" type="button" value="x" onclick="insert('*')" />
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <input class="button" type="button" value="7" onclick="insert(7)" />
+        </td>
+        <td>
+          <input class="button" type="button" value="8" onclick="insert(8)" />
+        </td>
+        <td>
+          <input class="button" type="button" value="9" onclick="insert(9)" />
+        </td>
+        <td>
+          <input class="button operator" type="button" value="-" onclick="insert('-')" />
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <input class="button" type="button" value="4" onclick="insert(4)" />
+        </td>
+        <td>
+          <input class="button" type="button" value="5" onclick="insert(5)" />
+        </td>
+        <td>
+          <input class="button" type="button" value="6" onclick="insert(6)" />
+        </td>
+        <td>
+          <input class="button operator" type="button" value="+" onclick="insert('+')" />
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <input class="button" type="button" value="1" onclick="insert(1)" />
+        </td>
+        <td>
+          <input class="button" type="button" value="2" onclick="insert(2)" />
+        </td>
+        <td>
+          <input class="button" type="button" value="3" onclick="insert(3)" />
+        </td>
+        <td rowspan="2" id="row">
+          <input class="button" type="button" value="=" onclick="equal()"
+            style="height: 106px; background-color: #716868" />
+        </td>
+      </tr>
+      <tr>
+        <td colspan="2" id="col">
+          <input class="button" type="button" value="0" onclick="insert(0)" style="width: 106px" />
+        </td>
+        <td>
+          <input class="button" type="button" value="." onclick="insert('.')" />
+        </td>
+      </tr>
+      <tr>
+        <td colspan="2">
+          <input type="button" id="bg" class="button" value="UBG" onclick="more()" />
+        </td>
+        <td colspan="2">
+          <input type="button" id="bwn" class="button" value="Bawon" onclick="bawon('5')" />
+        </td>
+      </tr>
+    </table>
+  </div>
+  <div class="note">
+    <textarea cols="30" rows="10" placeholder="Catatan"></textarea>
+  </div>
+
+  <script src="script.js">
+  </script>
+</body>
+
+</html>
